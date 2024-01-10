@@ -157,6 +157,7 @@ header {
         gap: 5px;
         display: flex;
         flex-direction: column;
+        margin: 1rem;
     }
     ul > li {
         height: 100%;
@@ -227,8 +228,8 @@ header {
     }
     @media screen and (min-width: 992px) {
         height: 100%;
-        width: 173px;
-        padding: 0;
+        max-width: 173px;
+        padding: 8px 1rem;
     }
 }
 </style>
