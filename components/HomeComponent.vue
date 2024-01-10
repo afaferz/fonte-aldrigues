@@ -7,7 +7,7 @@
                     <br />
                     Centro Empresarial
                 </span>
-                <span> FONTE ALDRIGUES </span>
+                <h1> FONTE ALDRIGUES </h1>
             </div>
             <div class="home__description">
                 <p>
@@ -65,7 +65,7 @@ section#inicio {
         color: #4b4b4b;
         line-height: 1.3;
     }
-    span:nth-child(2) {
+    h1 {
         color: $secondary;
         margin-top: 10px;
         display: inline-block;

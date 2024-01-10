@@ -1,13 +1,15 @@
 <template>
     <header class="header">
         <div class="header__content">
-            <a href="#">
-                <img
-                    src="/static/images/logo.svg"
-                    alt="Logo"
-                    class="header__logo"
-                />
-            </a>
+            <h1>
+                <a href="#">
+                    <img
+                        src="/static/images/logo.svg"
+                        alt="Logo"
+                        class="header__logo"
+                    />
+                </a>
+            </h1>
             <button class="header__button" @click="openMenu = !openMenu">
                 <span></span>
                 <span></span>

@@ -2,6 +2,8 @@
     <main id="root">
         <HomeComponent />
         <WorkspaceComponent />
+        <OwnershipsComponent />
+        <AboutComponent />
     </main>
 </template>
 
