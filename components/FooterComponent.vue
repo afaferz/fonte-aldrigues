@@ -78,12 +78,14 @@ footer {
     justify-content: space-between;
     margin: 0 auto;
     flex: 1 1 auto;
+    font-size: 14px;
+    gap: 1rem;
     @media screen and (min-width: 992px) {
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 1.5fr 10% 1fr;
+        grid-template-columns: 1.85fr 2fr 15% 1fr;
         grid-template-rows: 100%;
-        max-width: 75vw;
+        max-width: 90vw;
         margin: 0 auto;
     }
 }
