@@ -23,7 +23,11 @@
                     </span>
                 </div>
             </div>
-            <button class="card__infos__cta">Faça um orçamento</button>
+            <button class="card__infos__cta">
+                <a href="/" target="_blank" rel="noopener">
+                    Faça um orçamento
+                </a>
+            </button>
         </div>
     </div>
 </template>
@@ -128,7 +132,7 @@ export default {
         font-weight: bold;
         border-radius: 4px;
         font-size: 12px;
-        padding: 0.5rem 2rem;
+
         width: 85%;
         border: none;
         margin-bottom: 10px;
@@ -137,6 +141,14 @@ export default {
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+        cursor: pointer;
+        & > a {
+            padding: 0.5rem 2rem;
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            color: inherit;
+        }
     }
     @media screen and (min-width: 992px) {
         height: auto;
@@ -156,7 +168,7 @@ export default {
         &__cta {
             height: 50px;
             font-size: 1rem;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.75rem;
         }
     }
 }
