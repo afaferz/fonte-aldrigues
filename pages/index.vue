@@ -3,6 +3,7 @@
         <HomeComponent />
         <WorkspaceComponent />
         <OwnershipsComponent />
+        <PlansAndPricesComponent />
         <AboutComponent />
     </main>
 </template>
