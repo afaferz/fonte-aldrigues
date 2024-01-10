@@ -1,10 +1,13 @@
 <template>
-    <main id="root"></main>
+    <main id="root">
+        <HomeComponent />
+        <WorkspaceComponent />
+    </main>
 </template>
 
 <style scoped lang="scss">
 main#root {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     z-index: 1;
     position: relative;
