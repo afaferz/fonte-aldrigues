@@ -67,7 +67,7 @@ export default {
     }
 }
 .card__image {
-    height: 40%;
+    height: 250px;
     border-radius: 8px 8px 0 0;
     & > img {
         border-radius: 8px 8px 0 0;
@@ -77,7 +77,8 @@ export default {
     }
 }
 .card__infos {
-    height: 60%;
+    min-height: 400px;
+    height: max-content;
     padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
@@ -138,9 +139,10 @@ export default {
         margin-bottom: 10px;
         align-self: flex-end;
         position: absolute;
+        transform: translateX(-50%);
         bottom: 0;
         left: 50%;
-        transform: translateX(-50%);
+        margin: 1.75rem 0;
         cursor: pointer;
         & > a {
             padding: 0.5rem 2rem;
@@ -168,7 +170,6 @@ export default {
         &__cta {
             height: 50px;
             font-size: 1rem;
-            margin-bottom: 1.75rem;
         }
     }
 }
