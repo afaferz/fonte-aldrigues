@@ -143,7 +143,7 @@ section#planos-e-precos {
 .plan-and-price__carousel {
     height: 600px;
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     display: inline-flex;
