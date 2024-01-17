@@ -5,13 +5,21 @@
                 <div class="plan-and-price__content">
                     <h3 class="plan-and-price__title">Planos &amp; Preços</h3>
                     <div
-                        class="plan-and-price__carousel"
-                        v-for="item in plansAndPrices"
+                        v-for="(item, key) in plansAndPrices"
                         :key="item.name"
+                        class="plan-and-price__carousel-wrapper"
                     >
-                        <div v-for="(item2, key2) in item" :key="key2">
-                            <CardPlanAndPriceComponent :data="item2" />
+                        <span class="plan-and-price__subtitle">
+                            {{ key }}
+                        </span>
+                        <div class="plan-and-price__carousel-item">
+                            <div v-for="(item2, key2) in item" :key="key2">
+                                <CardPlanAndPriceComponent :data="item2" />
+                            </div>
                         </div>
+                        <span class="plan-and-price__disclamer">
+                            * Lembre-se de que não oferecemos diretamente serviços de buffet para eventos e coffee breaks, mas podemos indicar parceiros confiáveis para essas necessidades específicas.
+                        </span>
                     </div>
                 </div>
             </div>
@@ -24,80 +32,161 @@ export default {
     data() {
         return {
             plansAndPrices: {
-                planoPiloto: [
+                'Plano Piloto': [
                     {
-                        name: 'Cowork (sem Móveis)',
-                        type: 'Plano Mensal',
-                        imgLink: '/static/images/Rectangle 98.png',
+                        name: 'Cowork (com Móveis)',
+                        type: '_',
                         prices: [
                             {
-                                name: 'Sala com janela (Taguatinga)',
-                                range: [1100, 1800],
+                                name: 'Diária',
+                                range: [450],
                             },
                             {
-                                name: 'Salas sem janela (Taguatinga)',
-                                range: [1300, 2500],
+                                name: 'Por hora',
+                                range: [265],
                             },
                         ],
                     },
                     {
-                        name: 'Cowork (com Móveis)',
-                        type: 'Plano Mensal',
+                        name: 'Auditório',
+                        type: '_',
                         prices: [
                             {
-                                name: 'Diária (Taguatinga)',
-                                range: [250],
+                                name: 'Turno',
+                                range: [550],
                             },
                             {
-                                name: 'Diária (Plano Piloto)',
-                                range: [450],
+                                name: 'Diária',
+                                range: [1200],
+                            },
+                        ],
+                    },
+                    {
+                        name: 'Sala de Reunião ou Mini Auditório',
+                        type: '_',
+                        prices: [
+                            {
+                                name: 'Diária',
+                                range: [750],
                             },
                             {
-                                name: 'Por Hora (Taguatinga)',
-                                range: [65],
+                                name: 'Por hora',
+                                range: [275],
+                            },
+                        ],
+                    },
+                    {
+                        name: 'Espaço Gourmet ao Lado do Auditório',
+                        type: '_',
+                        prices: [
+                            {
+                                name: 'Adicional de Dia Inteiro',
+                                range: [650],
                             },
                             {
-                                name: 'Por Hora (Plano Piloto)',
-                                range: [265],
+                                name: 'Adicional de Meio Período',
+                                range: [520],
+                            },
+                        ],
+                    },
+                    {
+                        name: 'Espaço Gourmet (Somente)',
+                        type: '_',
+                        prices: [
+                            {
+                                name: 'Diária',
+                                range: [900],
+                            },
+                            {
+                                name: 'Meio Período',
+                                range: [750],
                             },
                         ],
                     },
                 ],
-                taguatinga: [
+                Taguatinga: [
                     {
-                        name: 'Cowork (sem Móveis)',
-                        type: 'Plano Mensal',
-                        imgLink: '/static/images/Rectangle 98.png',
+                        name: 'Cowork (com Móveis)',
+                        type: '_',
                         prices: [
                             {
-                                name: 'Sala com janela (Taguatinga)',
-                                range: [1100, 1800],
+                                name: 'Diária',
+                                range: [250],
                             },
                             {
-                                name: 'Salas sem janela (Taguatinga)',
-                                range: [1300, 2500],
+                                name: 'Por hora',
+                                range: [65],
                             },
                         ],
                     },
                     {
-                        name: 'Cowork (com Móveis)',
-                        type: 'Plano Mensal',
+                        name: 'Cowork (sem Móveis)',
+                        type: 'Mensal',
+                        imgLink: '/static/images/Rectangle 98.png',
                         prices: [
                             {
-                                name: 'Diária (Taguatinga)',
+                                name: 'Sala com janela',
+                                range: [1100, 1800],
+                            },
+                            {
+                                name: 'Salas sem janela',
+                                range: [1300, 2500],
+                            },
+                        ],
+                    },                 
+                    {
+                        name: 'Auditório',
+                        type: '',
+                        prices: [
+                            {
+                                name: 'Turno',
+                                range: [550],
+                            },
+                            {
+                                name: 'Diária',
+                                range: [900],
+                            },
+                        ],
+                    },
+                    {
+                        name: 'Sala de Reunião ou Mini Auditório',
+                        type: '_',
+                        prices: [
+                            {
+                                name: 'Diária',
+                                range: [350],
+                            },
+                            {
+                                name: 'Por hora',
+                                range: [75],
+                            },
+                        ],
+                    },
+                    {
+                        name: 'Espaço Gourmet ao Lado do Auditório',
+                        type: '_',
+                        prices: [
+                            {
+                                name: 'Adicional de Dia Inteiro',
                                 range: [250],
                             },
                             {
-                                name: 'Diária (Plano Piloto)',
-                                range: [450],
+                                name: 'Adicional de Meio Período',
+                                range: [120],
+                            },
+                        ],
+                    },
+                    {
+                        name: 'Espaço Gourmet (Somente)',
+                        type: '_',
+                        prices: [
+                            {
+                                name: 'Diária',
+                                range: [500],
                             },
                             {
-                                name: 'Por Hora (Taguatinga)',
-                                range: [65],
-                            },
-                            {
-                                name: 'Por Hora (Plano Piloto)',
-                                range: [265],
+                                name: 'Meio Período',
+                                range: [350],
                             },
                         ],
                     },
@@ -140,7 +229,12 @@ section#planos-e-precos {
     @media screen and (min-width: 992px) {
     }
 }
-.plan-and-price__carousel {
+
+.plan-and-price__carousel-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.plan-and-price__carousel-item {
     height: 600px;
     width: 100%;
     overflow-x: auto;
@@ -169,5 +263,23 @@ section#planos-e-precos {
     @media screen and (min-width: 992px) {
         font-size: 3.5rem;
     }
+}
+.plan-and-price__subtitle {
+    font-family: 'Inter', sans-serif;
+    color: $secondary;
+    margin: 1.5rem 0;
+    font-size: 1.7rem;
+    text-align: left;
+    font-weight: bold;
+    @media screen and (min-width: 992px) {
+        font-size: 2.2rem;
+    }
+}
+.plan-and-price__disclamer {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 1rem 0;
+    display: inline-block;
+    color: #fff;
 }
 </style>
