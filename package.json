@@ -16,6 +16,8 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "sass": "^1.69.7"
+    "nuxt-swiper": "^1.2.2",
+    "sass": "^1.69.7",
+    "vueperslides": "^2.16.0"
   }
 }

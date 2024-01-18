@@ -46,6 +46,7 @@ export default {
                                 range: [265],
                             },
                         ],
+                        ctaLink: ''
                     },
                     {
                         name: 'Auditório',
@@ -60,6 +61,7 @@ export default {
                                 range: [1200],
                             },
                         ],
+                        ctaLink: ''
                     },
                     {
                         name: 'Sala de Reunião ou Mini Auditório',
@@ -74,6 +76,7 @@ export default {
                                 range: [275],
                             },
                         ],
+                        ctaLink: ''
                     },
                     {
                         name: 'Espaço Gourmet ao Lado do Auditório',
@@ -88,6 +91,7 @@ export default {
                                 range: [520],
                             },
                         ],
+                        ctaLink: ''
                     },
                     {
                         name: 'Espaço Gourmet (Somente)',
@@ -102,6 +106,7 @@ export default {
                                 range: [750],
                             },
                         ],
+                        ctaLink: ''
                     },
                 ],
                 Taguatinga: [
@@ -118,6 +123,7 @@ export default {
                                 range: [65],
                             },
                         ],
+                        ctaLink: ''
                     },
                     {
                         name: 'Cowork (sem Móveis)',
@@ -133,6 +139,7 @@ export default {
                                 range: [1300, 2500],
                             },
                         ],
+                        ctaLink: ''
                     },                 
                     {
                         name: 'Auditório',
@@ -147,6 +154,7 @@ export default {
                                 range: [900],
                             },
                         ],
+                        ctaLink: ''
                     },
                     {
                         name: 'Sala de Reunião ou Mini Auditório',
@@ -161,6 +169,7 @@ export default {
                                 range: [75],
                             },
                         ],
+                        ctaLink: ''
                     },
                     {
                         name: 'Espaço Gourmet ao Lado do Auditório',
@@ -175,6 +184,7 @@ export default {
                                 range: [120],
                             },
                         ],
+                        ctaLink: ''
                     },
                     {
                         name: 'Espaço Gourmet (Somente)',
@@ -189,6 +199,7 @@ export default {
                                 range: [350],
                             },
                         ],
+                        ctaLink: ''
                     },
                 ],
             },
