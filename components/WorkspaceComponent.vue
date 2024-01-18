@@ -33,32 +33,21 @@
                         <Transition name="fade">
                             <Swiper
                                 v-show="idx === selectedTab"
-                                :modules="[
-                                    SwiperAutoplay,
-                                    SwiperEffectCreative,
-                                ]"
+                                :modules="[SwiperAutoplay, SwiperEffectFade]"
                                 :slides-per-view="1"
+                                :spaceBetween="'1rem'"
                                 :loop="true"
-                                :effect="'creative'"
+                                :effect="'fade'"
                                 :autoplay="{
-                                    delay: 8000,
+                                    delay: 3000,
                                     disableOnInteraction: true,
-                                }"
-                                :creative-effect="{
-                                    prev: {
-                                        shadow: false,
-                                        translate: ['-20%', 0, -1],
-                                    },
-                                    next: {
-                                        translate: ['100%', 0, 0],
-                                    },
                                 }"
                             >
                                 <SwiperSlide v-for="slide in tab" :key="slide">
                                     <div class="slide__img_wrapper">
                                         <img
                                             src=""
-                                            alt=""
+                                            :alt="img"
                                             v-for="img in slide"
                                             :key="img"
                                         />
@@ -78,7 +67,10 @@ export default {
     data() {
         return {
             contentTabs: [
-                [['1', '2', '3']],
+                [
+                    ['1', '2', '3'],
+                    ['1x', '2x', '3x'],
+                ],
                 [['4', '5', '6']],
                 [['7', '8', '9']],
             ],
@@ -256,11 +248,12 @@ section#espacos-de-trabalho {
     font-size: 4rem;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
+    gap: 1rem;
+    width: auto;
 }
 .swiper-wrapper {
-    min-width: 100vh;
     height: 100%;
-    width: 100vh;
+    width: fit-content;
 }
 .swiper-cards {
     width: 100%;
