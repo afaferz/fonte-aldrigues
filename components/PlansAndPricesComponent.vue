@@ -35,6 +35,7 @@ export default {
                 'Plano Piloto': [
                     {
                         name: 'Cowork (com Móveis)',
+                        img: '/static/images/plan-and-prices/plano-piloto/1.png',
                         type: '_',
                         prices: [
                             {
@@ -50,6 +51,7 @@ export default {
                     },
                     {
                         name: 'Auditório',
+                        img: '/static/images/plan-and-prices/plano-piloto/2.png',
                         type: '_',
                         prices: [
                             {
@@ -65,6 +67,7 @@ export default {
                     },
                     {
                         name: 'Sala de Reunião ou Mini Auditório',
+                        img: '/static/images/plan-and-prices/plano-piloto/3.png',
                         type: '_',
                         prices: [
                             {
@@ -80,6 +83,7 @@ export default {
                     },
                     {
                         name: 'Espaço Gourmet ao Lado do Auditório',
+                        img: '/static/images/plan-and-prices/plano-piloto/4.png',
                         type: '_',
                         prices: [
                             {
@@ -95,6 +99,7 @@ export default {
                     },
                     {
                         name: 'Espaço Gourmet (Somente)',
+                        img: '/static/images/plan-and-prices/plano-piloto/5.png',
                         type: '_',
                         prices: [
                             {
@@ -112,6 +117,7 @@ export default {
                 Taguatinga: [
                     {
                         name: 'Cowork (com Móveis)',
+                        img: '/static/images/plan-and-prices/taguatinga/1.png',
                         type: '_',
                         prices: [
                             {
@@ -127,8 +133,8 @@ export default {
                     },
                     {
                         name: 'Cowork (sem Móveis)',
+                        img: '/static/images/plan-and-prices/taguatinga/2.png',
                         type: 'Mensal',
-                        imgLink: '/static/images/Rectangle 98.png',
                         prices: [
                             {
                                 name: 'Sala com janela',
@@ -143,6 +149,7 @@ export default {
                     },                 
                     {
                         name: 'Auditório',
+                        img: '/static/images/plan-and-prices/taguatinga/3.png',
                         type: '',
                         prices: [
                             {
@@ -158,6 +165,7 @@ export default {
                     },
                     {
                         name: 'Sala de Reunião ou Mini Auditório',
+                        img: '/static/images/plan-and-prices/taguatinga/4.png',
                         type: '_',
                         prices: [
                             {
@@ -173,6 +181,7 @@ export default {
                     },
                     {
                         name: 'Espaço Gourmet ao Lado do Auditório',
+                        img: '/static/images/plan-and-prices/taguatinga/5.png',
                         type: '_',
                         prices: [
                             {
@@ -188,6 +197,7 @@ export default {
                     },
                     {
                         name: 'Espaço Gourmet (Somente)',
+                        img: '/static/images/plan-and-prices/taguatinga/6.png',
                         type: '_',
                         prices: [
                             {

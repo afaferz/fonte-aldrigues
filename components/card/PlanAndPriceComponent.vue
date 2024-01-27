@@ -1,7 +1,7 @@
 <template>
     <div class="card__container">
         <div class="card__image">
-            <img :src="data.imgLink" :alt="data.name" />
+            <img :src="data.img" :alt="data.name" />
         </div>
         <div class="card__infos">
             <div class="card__infos__title">
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <button class="card__infos__cta">
-                <a href="/" target="_blank" rel="noopener">
+                <a :href="data.ctaLink" target="_blank" rel="noopener">
                     Faça um orçamento
                 </a>
             </button>
