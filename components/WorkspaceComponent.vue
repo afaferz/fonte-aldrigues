@@ -36,20 +36,20 @@
                                 :modules="[SwiperAutoplay, SwiperEffectFade]"
                                 :slides-per-view="1"
                                 :spaceBetween="'1rem'"
-                                :loop="true"
                                 :effect="'fade'"
                                 :autoplay="{
-                                    delay: 5000,
-                                    disableOnInteraction: true,
+                                    delay: 3000,
+                                    pauseOnMouseEnter: true,
+                                    disableOnInteraction: false,
                                 }"
                             >
                                 <SwiperSlide v-for="slide in tab" :key="slide">
                                     <div class="slide__img_wrapper">
                                         <img
-                                            src=""
-                                            :alt="img"
-                                            v-for="img in slide"
-                                            :key="img"
+                                            v-for="[name, img] in slide"
+                                            :src="img"
+                                            :alt="name"
+                                            :key="name"
                                         />
                                     </div>
                                 </SwiperSlide>
@@ -68,11 +68,40 @@ export default {
         return {
             contentTabs: [
                 [
-                    ['1', '2', '3'],
-                    ['1x', '2x', '3x'],
+                    [
+                        [
+                            'Auditório 1',
+                            '/static/images/workspace/auditorium/1.png',
+                        ],
+                        [
+                            'Auditório 2',
+                            '/static/images/workspace/auditorium/2.png',
+                        ],
+                        [
+                            'Auditório 3',
+                            '/static/images/workspace/auditorium/3.png',
+                        ],
+                    ],
+                    [
+                        ['1x', '1x'],
+                        ['2x', '2x'],
+                        ['3x', '3x'],
+                    ],
                 ],
-                [['4', '5', '6']],
-                [['7', '8', '9']],
+                [
+                    [
+                        ['4x', '4x'],
+                        ['5x', '5x'],
+                        ['6x', '6x'],
+                    ],
+                ],
+                [
+                    [
+                        ['7x', '7x'],
+                        ['8x', '8x'],
+                        ['9x', '9x'],
+                    ],
+                ],
             ],
             tabs: ['Auditório', 'Sala de Reunião', 'Espaço Gourmet'],
             selectedTab: 0,
@@ -195,7 +224,6 @@ section#espacos-de-trabalho {
 }
 .workspace__tab_item {
     height: auto;
-    background-color: blue;
     padding: 10px 0;
     @media screen and (min-width: 992px) {
         height: 397px;
