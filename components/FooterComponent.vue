@@ -15,15 +15,22 @@
                 </address>
             </div>
             <div class="footer__contact">
-                <span class="footer__label"> Contato </span>
-                <span> (61) 99167-4883 </span>
+                <font-awesome-icon :icon="['fas', 'phone']" class="icon" />
+                <div>
+                    <span class="footer__label"> Contato </span>
+                    <span> (61) 99167-4883 </span>
+                </div>
             </div>
             <div class="footer__social">
                 <span class="footer__label"> Nos acompanhe nas Redes </span>
                 <ul>
                     <li v-for="socialLink in social" :key="socialLink.name">
-                        <a href="" target="_black" rel="noopener">
-                            {{ socialLink.name }}
+                        <a
+                            :href="socialLink.link"
+                            target="_black"
+                            rel="noopener"
+                        >
+                            <font-awesome-icon :icon="[...socialLink.icon]" />
                         </a>
                     </li>
                 </ul>
@@ -37,11 +44,26 @@ export default {
     data() {
         return {
             social: [
-                { name: 'Facebook', link: '', icon: '' },
-                { name: 'Facebook', link: '', icon: '' },
-                { name: 'Facebook', link: '', icon: '' },
-                { name: 'Facebook', link: '', icon: '' },
-                { name: 'Facebook', link: '', icon: '' },
+                {
+                    name: 'Facebook',
+                    link: '',
+                    icon: ['fa-brands', 'fa-facebook'],
+                },
+                {
+                    name: 'Instagram',
+                    link: '',
+                    icon: ['fa-brands', 'fa-instagram'],
+                },
+                {
+                    name: 'Twitter',
+                    link: '',
+                    icon: ['fa-brands', 'fa-twitter'],
+                },
+                {
+                    name: 'WhatsApp',
+                    link: '',
+                    icon: ['fa-brands', 'fa-whatsapp'],
+                },
             ],
             address: [
                 {
@@ -120,14 +142,23 @@ footer {
     width: 100%;
 }
 .footer__contact {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Inter', sans-serif;
-    gap: 6px;
-    line-height: 1.5;
     width: 100%;
     margin: 1rem 0;
     max-width: 360px;
+    display: inline-flex;
+    align-items: center;
+    gap: .85rem;
+    & > .icon {
+        font-size: 1.45rem;
+        color: $secondary;
+    }
+    & > div {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Inter', sans-serif;
+        gap: 6px;
+        line-height: 1.5;
+    }
 
     @media screen and (min-width: 992px) {
         width: 100%;
@@ -143,16 +174,31 @@ footer {
     gap: 1rem;
     width: 100%;
     max-width: 360px;
+    span {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
     ul {
         display: flex;
         list-style: none;
+        width: 100%;
+        align-items: flex-start;
         gap: 6px;
     }
     ul > li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 35px;
         height: 35px;
         background-color: $secondary;
         border-radius: 50%;
+        & > a {
+            font-size: 1.1rem;
+            color: #f3f3f3;
+        }
     }
 
     @media screen and (min-width: 992px) {

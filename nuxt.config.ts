@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     },
     devtools: { enabled: true },
     modules: [['@nuxtjs/google-fonts', { families: { Roboto: true, } }], 'nuxt-swiper'],
-    css: ['~/assets/css/main.css'],
+    css: ['~/assets/css/main.css', '@fortawesome/fontawesome-svg-core/styles.css'],
+    plugins: ['~/plugins/FontAwesome'],
     vite: {
         css: {
             preprocessorOptions: {

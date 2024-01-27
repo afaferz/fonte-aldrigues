@@ -5,6 +5,7 @@
         <OwnershipsComponent />
         <PlansAndPricesComponent />
         <AboutComponent />
+        <ContactComponent />
     </main>
 </template>
 
