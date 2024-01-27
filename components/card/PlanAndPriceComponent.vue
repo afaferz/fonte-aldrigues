@@ -157,7 +157,7 @@ export default {
         min-height: 60%;
         padding: 2rem 2.5rem;
         &__title {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
         &__subtitle {
             font-size: 1.3rem;
