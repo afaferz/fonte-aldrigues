@@ -95,7 +95,7 @@ export default {
                 email: '',
                 phone: '',
                 workspace: '',
-                hours: '',
+                hours: '1',
             },
         };
     },
